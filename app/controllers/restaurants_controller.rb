@@ -23,6 +23,10 @@ class RestaurantsController < ApplicationController
 		redirect_to '/restaurants'
 	end
 
+	def show
+		@restaurant = Restaurant.find params[:id]
+	end
+
 	def destroy
 		@restaurant = Restaurant.find params[:id]
 		@restaurant.delete
