@@ -21,7 +21,7 @@
 	<%= form.text_area :content %>
 
 	<%= form.label :rating %>
-	<%= form.select :rating, options_for_select(1..5), prompt: "Select" %>
+	<%= form.select :rating, options_for_select(@review.valid_ratings), prompt: "Select" %>
 
 <br>
 
