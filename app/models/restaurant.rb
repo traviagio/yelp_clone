@@ -3,7 +3,7 @@ class Restaurant < ActiveRecord::Base
 	  validates :name, presence: true, length: { minimum: 5 }, uniqueness: true
 	  validates :description, presence: true
 
-	  
+
 	def average_rating
 		reviews.average('rating') || 'Unrated'
 	end
